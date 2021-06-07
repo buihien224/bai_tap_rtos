@@ -22,13 +22,27 @@ This project base on arduino and esp32
 > 1. install Adruno IDE 
 > 2. install ESP32 SDK
 > 3. install other component libraries
+> 4. code and deploy
 
-And this will produce a flow chart:
+**Install Adruno IDE**
+	
 
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
+ - go to [this](https://www.microsoft.com/en-hk/p/arduino-ide/9nblggh4rsd8?ocid=badge&rtc=1&activetab=pivot:overviewtab) download and install IDE
+ 
+**ESP32 SDK**
+	
+ - Open Arduino IDE / File / Preferences / 
+		paste : 
+`https://dl.espressif.com/dl/package_esp32_index.json
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json`
+at Additional Boards Manager URLs
+ -  Open Arduino IDE / Tools / Boards /  Boards Manager -> find Esp32 and install
+ 
+**Install Libs**
+ - copy folder libraries to `Documents\Arduino\libraries`
+
+ 
+
+	
+
