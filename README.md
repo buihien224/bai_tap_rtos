@@ -1,13 +1,13 @@
 # Speedometer ESP32 project
  *Thanks Mr.H3 for teaching us*
 
-	
+    
 
 > Our Team : 
-	 Bùi Đức Hiền ,
-	Phạm Minh Quân ,
-	Phan Thị Mai Linh , 
-	Lê Trung Kiên .
+     Bùi Đức Hiền ,
+    Phạm Minh Quân ,
+    Phan Thị Mai Linh , 
+    Lê Trung Kiên .
 > 
 This project base on arduino and esp32 
 ## Requirement
@@ -25,18 +25,19 @@ This project base on arduino and esp32
 > 4. code and deploy
 
 **Install Adruno IDE**
-	
+    
 
  - go to [this](https://www.microsoft.com/en-hk/p/arduino-ide/9nblggh4rsd8?ocid=badge&rtc=1&activetab=pivot:overviewtab) download and install IDE
  
 **ESP32 SDK**
-	
+    
  - Open Arduino IDE / File / Preferences / 
-		paste : 
-`https://dl.espressif.com/dl/package_esp32_index.json
-http://arduino.esp8266.com/stable/package_esp8266com_index.json
-https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json`
-at Additional Boards Manager URLs
+        paste : 
+    `https://dl.espressif.com/dl/package_esp32_index.json
+    http://arduino.esp8266.com/stable/package_esp8266com_index.json
+    https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json`
+
+    at Additional Boards Manager URLs
  -  Open Arduino IDE / Tools / Boards /  Boards Manager -> find Esp32 and install
  
 **Install Libs**
@@ -56,5 +57,5 @@ at Additional Boards Manager URLs
 
  
 
-	
+    
 
