@@ -33,9 +33,13 @@ This project base on arduino and esp32
     
  - Open Arduino IDE / File / Preferences / 
         paste : 
-    `https://dl.espressif.com/dl/package_esp32_index.json
-    http://arduino.esp8266.com/stable/package_esp8266com_index.json
-    https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json`
+   
+
+>      https://dl.espressif.com/dl/package_esp32_index.json
+>      http://arduino.esp8266.com/stable/package_esp8266com_index.json
+>      https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
+
+    
 
     at Additional Boards Manager URLs
  -  Open Arduino IDE / Tools / Boards /  Boards Manager -> find Esp32 and install
