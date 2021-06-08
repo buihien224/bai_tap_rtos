@@ -41,7 +41,7 @@ This project base on arduino and esp32
 
     
 
-    at Additional Boards Manager URLs
+at Additional Boards Manager URLs
  -  Open Arduino IDE / Tools / Boards /  Boards Manager -> find Esp32 and install
  
 **Install Libs**
