@@ -3,6 +3,8 @@
 #else
 #define ARDUINO_RUNNING_CORE 1
 #endif
+
+//libs
 #include "GY521.h"
 #include <SPI.h>
 #include <Wire.h>
@@ -18,14 +20,14 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 #define NUMFLAKES     10
 #define LOGO_HEIGHT   16
 #define LOGO_WIDTH    16
+
+
 GY521 sensor(0x69);
 double   X = 0;
 double   Y = 0 ;
 double   Z = 0 ;
 double V = 0;
 double U = 0 ;
-void TaskBlink( void *pvParameters );
-void TaskAnalogReadA3( void *pvParameters );
 
 
 void setup() {
@@ -95,14 +97,15 @@ void MPU6050(void *pvParameters)
   {
     sensor.read();
     X = (sensor.getAccelX() * 10);
-    Y = (sensor.getAngleY());
-    Z = (sensor.getAngleZ());
+    Y = (sensor.getAngleY() * 10);
+    Z = (sensor.getAngleZ() * 10);
 
     if (Y >= 1 || Y <= -1) {
       V = Y * 0.1 + U ;
       U = V;
       cin = 0;
     }
+
     else
     {
       if (cin == 4 )
@@ -115,7 +118,7 @@ void MPU6050(void *pvParameters)
           V = 0;
           U = V;
         }
-        cin++;
+      cin++;
     }
     Serial.print(X, 3);
     Serial.print('\t');
@@ -141,6 +144,8 @@ void LCD(void *pvParameters)
     String Y1 = String(Y , 2 );
 
     alarm(1);
+    alarm(2);
+
     delay(1000);
   }
 }
@@ -158,8 +163,8 @@ void oled(String text, int x, int y, int size, boolean d) {
 }
 void alarm(int a)
 {
-    if (a == 1)
-    {
+  if (a == 1)
+  {
     String V1 = String(V * 3.6 , 1 );
     String Y1 = String(Y , 2 );
     display.clearDisplay();
@@ -170,13 +175,18 @@ void alarm(int a)
     oled("h", 1, 21, 1, false);
     oled("s2", 50, 21, 1, false);
     display.display();
-    delay(1000); 
-    }
-    if (a == 2) 
+    delay(1000);
+  }
+  if (a == 2)
+  {
+    if (V1 > 50)
     {
-      
+      display.clearDisplay();
+      oled("Over", 1, 3, 1, false);
+      display.display();
+      delay(1000);
     }
-    }
-  
-  
- 
+  }
+}
+
+
