@@ -163,10 +163,10 @@ void oled(String text, int x, int y, int size, boolean d) {
 }
 void alarm(int a)
 {
+  String V1 = String(V * 3.6 , 1 );
+  String Y1 = String(Y , 2 );
   if (a == 1)
   {
-    String V1 = String(V * 3.6 , 1 );
-    String Y1 = String(Y , 2 );
     display.clearDisplay();
     oled(V1, 1, 3, 1, false);
     oled(Y1, 50, 3, 1, false);
