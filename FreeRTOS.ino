@@ -146,7 +146,7 @@ void LCD(void *pvParameters)
     alarm(1);
     alarm(2);
 
-    delay(1000);
+    delay(100);
   }
 }
 void oled(String text, int x, int y, int size, boolean d) {
@@ -179,7 +179,7 @@ void alarm(int a)
   }
   if (a == 2)
   {
-    if (V1 > 50)
+    if (V > 50.0)
     {
       display.clearDisplay();
       oled("Over", 1, 3, 1, false);
@@ -188,5 +188,3 @@ void alarm(int a)
     }
   }
 }
-
-
