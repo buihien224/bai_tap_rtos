@@ -97,7 +97,7 @@ void MPU6050(void *pvParameters)
   {
     sensor.read();
     X = (sensor.getAccelX() * 10);
-    Y = (sensor.getAngleY() * 10);
+    Y = (sensor.getAccelY() * 10);
     Z = (sensor.getAngleZ() * 10);
 
     if (Y >= 1 || Y <= -1) {
